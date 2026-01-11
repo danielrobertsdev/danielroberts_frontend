@@ -6,9 +6,6 @@
     <title>Daniel Roberts Dev</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/icomoon/icomoon-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -99,12 +96,12 @@
                 </div>
 
                 <div class="col">
-                    <div class="content-modal">
+                    <div class="d-flex content-modal">
                         <h2 class="content-modal__title"><strong>Sign up to SCWonline</strong></h2>
 
                         <h3 class="content-modal__subtitle">Please create your account</h3>
 
-                        <form>
+                        <form class="d-flex content-modal__form">
                             <div class="field-group">
                                 <label for="title" class="d-block w-100">Title</label>
                                 <select id="title" class="d-block w-100">
@@ -121,6 +118,40 @@
                             <div class="field-group">
                                 <label for="forename" class="d-block w-100">Forename(s)</label>
                                 <input id="forename" type="text" class="d-block w-100" placeholder="Enter your Forename(s)">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="surname" class="d-block w-100">Surname</label>
+                                <input id="surname" type="text" class="d-block w-100" placeholder="Enter your Surname">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="email" class="d-block w-100">Email address</label>
+                                <input id="email" type="email" class="d-block w-100" placeholder="Enter your email address">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="dob" class="d-block w-100">Date of birth</label>
+                                <input id="dob" type="number" class="d-block w-100" placeholder="DD / MM / YYYY">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="telephone" class="d-block w-100">Mobile telephone number</label>
+                                <input id="telephone" type="tel" class="d-block w-100" placeholder="Enter your mobile number">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="language" class="d-block w-100">Preferred language</label>
+                                <select id="language" class="d-block w-100">
+                                    <option value="" disabled selected>Select your preferred language</option>
+                                    <option value="English">English</option>
+                                    <option value="Cymraeg">Cymraeg</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="user-password" class="d-block w-100">Password</label>
+                                <input id="user-password" type="password" class="d-block w-100" placeholder="••••••••••">
                             </div>
                         </form>
                     </div>
