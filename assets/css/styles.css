@@ -1,0 +1,166 @@
+/***********************
+DEFINE CUSTOM PROPERTIES
+************************/
+:root {
+	/* colors */
+	--main-bg-color: #247C86;
+	--second-bg-color: #007B67;
+	--third-bg-color: #37394B;
+	--main-text-color: #fff;
+	/* font weights */
+	--font-weight-book: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	/* sizing */
+	--grid-gap: 30px;
+	--screen-sm: 576px;
+	--screen-md: 768px;
+	--screen-lg: 992px;
+	--screen-xl: 1200px;
+	--screen-xxl: 1400px;
+}
+
+/******************
+GLOBAL CSS RESETS
+*******************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-family: "Gibson", Arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.2;
+}
+
+/* Make headings normal font weight to allow for bold highlight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/***********************
+SING-UP PROTOTYPE STYLES
+************************/
+
+/* Typography */
+strong {
+	font-weight: var(--font-weight-semibold);
+}
+
+.text-light {
+	font-weight: var(--font-weight-book);
+}
+
+/* layout */
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--grid-gap) / 2);
+	padding-right: calc(var(--grid-gap) / 2);
+	width: 100%;
+}
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	gap: var(--grid-gap);
+}
+@media (min-width: 576px) {
+	.row {
+		flex-direction: row;
+	}
+}
