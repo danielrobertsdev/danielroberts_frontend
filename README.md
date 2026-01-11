@@ -1,10 +1,11 @@
 # danielroberts_frontend
-Social Care Wales interview task
+# Social Care Wales interview task
 
 ## Approach:
 - I believe in being honest, transparent and accountable
 - I set myself aside 6 hours to complete this task and ran over by about 30 minutes
 - To keep it simple to review I have completed the task using a index.html and unminified vanilla CSS file
+- 
 - I wanted to set all common values as CSS custom properties but could not access the Figma variable name values
 - Where possible I have used a fontset for the icons to allow for flexibility when styling
 
