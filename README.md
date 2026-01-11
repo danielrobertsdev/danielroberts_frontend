@@ -19,6 +19,7 @@
 - If full access to Figma was available I would create an accurate styleguide based on the variables setup by the design team
 - Change the form field group setup to allow the focus state to change the label colour shown in the design prototype
 - Collapse the navigation under screen widths of 992px and provide users with a mobile menu trigger button
+- Add box shadow for content modal used for form and check through the rest of components to make sure I have not missed anymore
 
 ## Next steps if making production ready
 - Full browser and device testing
