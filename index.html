@@ -10,15 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
+    <header class="header">
+        <div class="header-top">
+            <a href="#">Accessibility on our website</a>
+        </div>
+
+        <div class="header-main d-flex">
+            <a href="#">
+                <img src="assets/images/social-care-wales-logo.svg" alt="Social Care Wales" width="288" height="57">
+            </a>
+
+            <nav class="header-nav d-flex">
+                <a href="#">
+                    <span>Home</span>
+                </a>
+
+                <a href="#">
+                    <span>Who we are</span>
+                </a>
+            </nav>
+        </div>
     </header>
     
     <section>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Welcome to <strong>SCWonline</strong></h1>
+                    <h1>Welcome to <br><strong>SCWonline</strong></h1>
                     
                     <p class="text-light">SCWonline is where you can apply to register and manage your registrations using a phone, PC or tablet. Employers, known to us as signatories, also use the site.</p>
             
@@ -33,7 +51,31 @@
                 </div>
 
                 <div class="col">
-                    <h2>Form box to go here</h2>
+                    <div class="content-modal">
+                        <h2 class="content-modal__title"><strong>Sign up to SCWonline</strong></h2>
+
+                        <h3 class="content-modal__subtitle">Please create your account</h3>
+
+                        <form>
+                            <div class="field-group">
+                                <label for="title" class="d-block w-100">Title</label>
+                                <select id="title" class="d-block w-100">
+                                    <option value="" disabled selected>Select your title</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Ms">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mx">Mx</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="forename" class="d-block w-100">Forename(s)</label>
+                                <input id="forename" type="text" class="d-block w-100" placeholder="Enter your Forename(s)">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
