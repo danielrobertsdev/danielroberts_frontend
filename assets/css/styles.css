@@ -1,6 +1,7 @@
 /***********************
 DEFINE CUSTOM PROPERTIES
 ************************/
+
 :root {
 	/* colors */
 	--main-color: #247C86;
@@ -71,12 +72,6 @@ ul {
 	margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
-}
-
 /* Set core body defaults */
 body {
 	background-color: var(--main-color);
@@ -108,12 +103,6 @@ h6 {
 	font-weight: normal;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-	text-decoration-skip-ink: auto;
-	color: currentColor;
-}
-
 /* Make images easier to work with */
 img,
 picture {
@@ -131,7 +120,7 @@ select {
 }
 
 /***********************
-SING-UP PROTOTYPE STYLES
+SIGN-UP PROTOTYPE STYLES
 ************************/
 
 /* Helper classes */
@@ -202,12 +191,35 @@ strong {
 		flex-direction: row;
 	}
 }
+@media (min-width: 1400px) {
+	.row:first-child {
+		padding-left: 109px;
+	}
+	.row:last-child {
+		padding-right: 109px;
+	}
+}
 
 .col {
 	flex: 1 0 0;
 }
 
 /* Header */
+.skip {
+	color: var(--light-color);
+	height: 1px;
+	left: -10000px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
+.skip:focus {
+	position: static;
+	height: auto;
+	width: auto;
+}
+
 .header-top {
 	background-color: var(--third-color);
 	flex-wrap: wrap;
@@ -233,7 +245,6 @@ strong {
 	text-decoration: none;
 	transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
 }
-
 .header-top__item--active,
 .header-top__item:hover {
 	background-color: var(--third-dark-color);
@@ -254,6 +265,11 @@ strong {
 
 .header-logo {
 	flex-shrink: 0;
+}
+@media (max-width: 991px) {
+	.header-logo {
+		margin-bottom: calc(var(--space-12) / 2);
+	}
 }
 
 .header-nav {
@@ -302,14 +318,24 @@ strong {
 /* Main content area */
 .main-content {
 	background-image: url(../images/main-content-bg.svg);
-	background-position: top right;
+	background-position: bottom right;
 	background-repeat: no-repeat;
-	background-size: 50%;
+	background-size: 80%;
 	padding: calc(var(--space-12) / 2) 0;
+}
+@media (min-width: 768px) {
+	.main-content {
+		padding: var(--space-12) 0;
+	}
 }
 @media (min-width: 992px) {
 	.main-content {
 		padding: calc(var(--space-12) * 2) 0;
+	}
+}
+@media (min-width: 1200px) {
+	.main-content {
+		padding-bottom: 200px;
 	}
 }
 
@@ -321,11 +347,6 @@ strong {
 @media (min-width: 992px) {
 	.content-text {
 		width: 90%;
-	}
-}
-@media (min-width: 1200px) {
-	.content-text {
-		width: 75%;
 	}
 }
 
@@ -402,12 +423,23 @@ strong {
 .field-group:has(label) select {
 	background-color: var(--field-bg-color);;
 	border-bottom: 2px solid var(--border-color);
+	border-radius: 0;
 	border-top-left-radius: var(--border-radius);
 	border-top-right-radius: var(--border-radius);
 	box-shadow: 0px 2px 4px -1px rgba(26,26,26,.08);
 	padding: var(--space-12) var(--space-6) var(--space-4);
 	transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
 }
+
+.field-group:has(label) input:hover,
+.field-group:has(label) input:focus,
+.field-group:has(label) select:hover,
+.field-group:has(label) select:focus {
+	border-bottom-color: var(--second-color);
+	background-color: var(--field-hover-bg-color);
+	cursor: pointer;
+}
+
 .field-group:has(label) input:hover,
 .field-group:has(label) input:focus,
 .field-group:has(label) select:hover,
